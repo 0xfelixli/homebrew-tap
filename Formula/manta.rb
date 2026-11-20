@@ -1,8 +1,8 @@
 class Manta < Formula
   desc "Sleek Go CLI, TUI & macOS menu bar proxy manager with embedded mihomo engine"
   homepage "https://github.com/0xfelixli/manta"
-  url "https://github.com/0xfelixli/manta/archive/refs/tags/v0.2.1.tar.gz"
-  sha256 "fffe9bf6947ca451ae0c7e45d82ef77aef8b76536745f616b68d72b568398790"
+  url "https://github.com/0xfelixli/manta/archive/refs/tags/v0.2.2.tar.gz"
+  sha256 "35e0fa8f2783292b6fe175ed8c45d4bcb6e5f9da559c1cbf4ea07a01e27d3168"
   license "MIT"
 
   depends_on "go" => :build
@@ -19,7 +19,7 @@ class Manta < Formula
       Quick start:
         manta init
         manta sub add main "https://your-clash-subscription-url"
-        sudo manta up --tun
+        manta up --tun
         manta tui
     EOS
   end
