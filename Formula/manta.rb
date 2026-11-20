@@ -1,8 +1,8 @@
 class Manta < Formula
   desc "Sleek Go CLI, TUI & macOS menu bar proxy manager with embedded mihomo engine"
   homepage "https://github.com/0xfelixli/manta"
-  url "https://github.com/0xfelixli/manta/archive/refs/tags/v0.2.0.tar.gz"
-  sha256 "83ec256f419dc426497e19af7ad6c8d46c55598c7c408756849449f71b96cf86"
+  url "https://github.com/0xfelixli/manta/archive/refs/tags/v0.2.1.tar.gz"
+  sha256 "fffe9bf6947ca451ae0c7e45d82ef77aef8b76536745f616b68d72b568398790"
   license "MIT"
 
   depends_on "go" => :build
@@ -10,7 +10,8 @@ class Manta < Formula
   def install
     ENV["CGO_ENABLED"] = "1"
     ldflags = "-s -w -X github.com/metacubex/mihomo/constant.Version=1.19.34"
-    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/manta"
+    system "go", "build", "-tags", "with_gvisor", *std_go_args(ldflags: ldflags), "./cmd/manta"
+    generate_completions_from_executable(bin/"manta", "completion")
   end
 
   def caveats
