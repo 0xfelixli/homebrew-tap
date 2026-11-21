@@ -1,9 +1,9 @@
 class Manta < Formula
   desc "Sleek Go CLI, TUI & macOS menu bar proxy manager with embedded mihomo engine"
   homepage "https://github.com/0xfelixli/manta"
-  url "https://github.com/0xfelixli/manta/releases/download/v0.3.7/manta-darwin-arm64.tar.gz"
-  version "0.3.7"
-  sha256 "51b53df5fdf8d626b34752b2d0488341cf96cef9bbfb87231e49a5e7de5f7e96"
+  url "https://github.com/0xfelixli/manta/releases/download/v0.3.8/manta-darwin-arm64.tar.gz"
+  version "0.3.8"
+  sha256 "bd3df0b16f24cf3c82e108f4ba8f5e56649de59ff57288ddb7bd7078a3962562"
   license "MIT"
 
   def install
