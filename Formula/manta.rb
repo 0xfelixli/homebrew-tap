@@ -18,6 +18,9 @@ class Manta < Formula
         manta sub add main "https://your-clash-subscription-url"
         manta up --tun
         manta tui
+
+      After upgrading (to switch running daemon & menu bar to the new version):
+        manta down && manta up --tun && manta menubar -d
     EOS
   end
 
